@@ -1,4 +1,4 @@
-package first.playwright;
+package e2e;
 
 /**
  * Hello world!

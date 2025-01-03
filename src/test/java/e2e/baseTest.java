@@ -1,4 +1,4 @@
-package first.playwright;
+package e2e;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;

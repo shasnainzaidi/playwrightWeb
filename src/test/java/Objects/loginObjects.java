@@ -1,6 +1,8 @@
-package first.playwright;
+package Objects;
 
-public class pageObjects extends baseTest{
+import e2e.baseTest;
+
+public class loginObjects extends baseTest {
 
     private final String loginButton = "//button[@aria-label='Login']";
     private final String loginWithEmailButton = "//span[normalize-space()='Login with Email']";
@@ -30,8 +32,8 @@ public class pageObjects extends baseTest{
     public void clickUserProfile(){
         page.locator(UserProfile).click();
     }
-    String actualUserName = page.locator(UserName).textContent();
-    String expectedUserName = "Everything for “U”";
+    public String actualUserName = page.locator(UserName).textContent();
+    public String expectedUserName = "Everything for “U”";
 
 
 }
