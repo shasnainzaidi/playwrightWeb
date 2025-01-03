@@ -7,6 +7,8 @@ public class pageObjects extends baseTest{
     private final String emailField = "//input[@id='email']";
     private final String passwordField = "//input[@id='password']";
     private final String submitButton = "//span[normalize-space()='Log in']";
+    private final String UserProfile = "._16ad6674";
+    private final String UserName = "//span[@aria-label='Username']";
 
     public void clickLoginButton(){
         page.locator(loginButton).click();
@@ -24,5 +26,12 @@ public class pageObjects extends baseTest{
     public void clickSubmitButton() {
         page.locator(submitButton).click();
     }
+
+    public void clickUserProfile(){
+        page.locator(UserProfile).click();
+    }
+    String actualUserName = page.locator(UserName).textContent();
+    String expectedUserName = "Everything for “U”";
+
 
 }

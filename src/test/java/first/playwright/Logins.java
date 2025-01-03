@@ -1,5 +1,6 @@
 package first.playwright;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -20,11 +21,16 @@ private pageObjects PageObjects;
             PageObjects.enterEmail("hasnain.xaidi1@gmail.com");
             PageObjects.enterPassword("qwerty10@");
             PageObjects.clickSubmitButton();
+            PageObjects.clickUserProfile();
+
+             Assert.assertEquals(PageObjects.actualUserName, PageObjects.expectedUserName,"The Username does not match the expected value." );
             }
+
+
+
 
     @AfterClass
     public void tearDown() {
-        // Close the browser
         PageObjects.closeBrowser();
     }
         }
